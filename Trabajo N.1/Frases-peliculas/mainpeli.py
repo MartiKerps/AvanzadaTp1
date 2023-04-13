@@ -35,7 +35,8 @@ for linea in info:
     peliculas.append(pelicula)
     lineanueva = pelicula + '/' + frase
     frases_y_peliculas.append(lineanueva)
-    
+
+
 print("#######################################")
 print("#  Películas: Preguntas y respuestas  #")
 print("#######################################")
@@ -88,7 +89,7 @@ while 0<opcion<6:
     if opcion == 3:
         print("eligio opcion 3: ")
         hora3 = str(datetime.datetime.now())
-        linea3 = 'Se eligio opcion 3 a la hora:' + hora3 +'\n'
+        linea3 = ' eligio opcion 3 a la hora:' + hora3 +'\n'
         opciones_elegidas.append(linea3)
         archivo_nuevo.write(linea3)
         
@@ -111,3 +112,8 @@ while 0<opcion<6:
     opcion = module.preguntar(True)
 
 archivo_nuevo.close()
+
+
+
+
+
