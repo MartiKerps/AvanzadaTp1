@@ -21,8 +21,8 @@ def historial():
     
     return(retorno)
 
-def vaciarRegistrop():
-    with open('./data/Registrop.txt', "w") as archi:
+def vaciarRegistrop(Nombre):
+    with open('./data/'+Nombre, "w") as archi:
         archi.truncate(0)
 
 
@@ -118,3 +118,53 @@ def pregunta_2(lista_peliculas):
     
     return(frase, opciones, correcta)
 
+def preguntar(numeroopcion):
+    numero=0
+        
+    print("\n","\n","#######################################")
+    print("#  Películas: Preguntas y respuestas  #")
+    print("#######################################")
+    print("\n","Elige una opción: ")
+    print("1 - Mostrar lista de películas.")
+    print("2 - ¡Trivia de película!")
+    print("3 - Mostrar secuencia de opciones seleccionadas previamente.")
+    print("4 - Borrar historial de opciones.")
+    print("5 - Salir")
+    numeroopcion=int(input("Quiere elegir otra opcion? (ingrese 1,2,3,4,5): "))
+    if numeroopcion==2:
+        numero=2
+    elif numeroopcion==3:
+        numero=3 
+    elif numeroopcion==4:
+        numero=4
+    elif numeroopcion==5:
+        numero=5 
+    else :
+       print("el numero ingresado no es correcto ")
+
+    return numero
+
+def corrector(op, correcta):
+    if op == correcta:
+        return "Correcto"
+    else:
+        return "incorrecto"
+    
+def cargarReg(texto):
+    with open('./data/Registro1.txt', "a") as archi:
+        archi.write(texto)
+
+def leerArchivo(Nombre):
+    with open(('./data/'+Nombre), "r") as archi:
+        texto=archi.read()
+        
+    return(texto)
+
+
+    
+    
+
+
+
+
+    

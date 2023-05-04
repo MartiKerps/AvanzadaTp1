@@ -1,3 +1,0 @@
-marti= La cantidad de aciertos es : 20, la fecha es2023-04-13 19:12:01.437433
-mart= La cantidad de aciertos es : 20, la fecha es2023-04-13 19:13:03.888728
-martt= La cantidad de aciertos es : 20, la fecha es2023-04-13 19:13:54.071773
