@@ -14,7 +14,7 @@ def escala_precios (NombreArchivo):
     alt=[]
 
 
-    with open(NombreArchivo, "r") as archi:
+    with open(("./datos/"+NombreArchivo), "r") as archi:
         prueba=archi.readlines()
     del prueba[0]
     
