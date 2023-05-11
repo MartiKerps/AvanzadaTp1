@@ -105,6 +105,7 @@ def pregunta_2(lista_peliculas):
     random.shuffle(lista_peliculas)
     pelis=[]
     frases=[]
+    op=[]
     for pelicula in lista_peliculas:
         index, peli, frase = pelicula.split('/')
         pelis.append(peli)
@@ -112,11 +113,22 @@ def pregunta_2(lista_peliculas):
     
     correcta=pelis[0]
 
-    opciones = [pelis[0],pelis[1],pelis[2]]
+    opciones = [pelis[0],pelis[1],pelis[2],pelis[3],pelis[4]]
+    op.append(opciones[0])
+    for i in range(5):
+        if opciones[1]!=opciones[0]:
+            op.append(opciones[1])
+        else:
+            op.append(opciones[3])
+        if opciones[2]!=opciones[0] and opciones[2]!=opciones[1]:
+            op.append(opciones[2])
+        else:
+            op.append(opciones[4])
+
     random.shuffle(opciones)
     frase=frases[0]
     
-    return(frase, opciones, correcta)
+    return(frase, op, correcta)
 
 def preguntar(numeroopcion):
     numero=0
