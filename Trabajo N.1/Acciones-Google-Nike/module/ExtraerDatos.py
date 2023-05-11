@@ -11,6 +11,6 @@ def ExtraerDatos(lista):
     nuevo=[]
     
     for i in range(len(lista)):
-        nuevo.append(lista[i][columna])
+        nuevo.append(float(lista[i][columna]))
         
     return(nuevo)
