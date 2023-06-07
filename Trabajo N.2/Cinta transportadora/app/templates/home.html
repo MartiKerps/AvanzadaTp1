@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinta Transportadora </title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container p-3">
+        <img src="static/images/pelicula3.png" alt="">
+        <h1>Analizador de nutrientes y agua en frutas
+        </h1><br>
+        <div class="container p-3">
+            <form action="/" method="post">
+                <label for="cantidad">Ingrese la cantidad de alimentos por cajon:</label><br>
+                <input type="int" id="cantidad" cantidad="numero" ><br><br>
+        
+            </form>
+        </div>
+        <!-- 
+        <div class="btn-group">
+         <a href="p" class="btn btn-primary active" aria-current="page">Detectar alimentos</a>
+         <a href="lista" class="btn btn-primary">Ver Listado de  frutas</a>
+         <a href="historial" class="btn btn-primary">Resultados</a> 
+        </div>
+    -->
+    </div>
+    <div class="card" style="width: 18rem;">
+        <!--<img src="..." class="card-img-top" alt="...">  -->
+        <div class="card-body">
+          <h5 class="card-title">Cajon de Alimentos </h5>
+          <!-- <p class="card-text">La cantidad de alimentos por cajon es: {{cantidad }}</p>-->
+        </div>   
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">kiwi:{{kiw}}</li>
+          <li class="list-group-item">manzana:{{manz}}</li>
+          <li class="list-group-item">papa:{{pap}}</li>
+          <li class="list-group-item">zanahoria:{{zana}}</li>
+        </ul>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">frutas:{{fruta}}</li>
+            <li class="list-group-item">verduras:{{verdura}}</li>
+            <li class="list-group-item">total de frutas y verduras: {{total}}</li>
+        </ul>
+        
+      </div>
+    
+</body>
+</html>
