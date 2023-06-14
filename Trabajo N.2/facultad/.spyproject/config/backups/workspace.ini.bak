@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = 'empty-project-type'
-recent_files = ['main.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\persona.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\aplicacion\\aplicacion.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\estudiante.py', 'estudiante.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\Universidad.py', 'facultad.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\Curso.py', 'curso.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\profesor.py', 'profesor.py', '..\\..\\..\\..\\TPs\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\departamento.py', 'departamento.py']
+recent_files = ['main.py', 'modules\\profesor.py', '..\\..\\..\\..\\..\\Documents\\facultad\\2º año\\programacion avanzada\\repositorio 2022\\Grupo.Ca-ete.Kerps\\tp2\\universidad\\modulos\\profesor.py']
 
 [main]
 version = 0.2.0
