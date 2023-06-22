@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .word-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        .word-cloud .word {
+            margin: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cantidad total de reclamos: </h1>
+    {{cant_total}}
+    {{palabras}}
+    <h1>Porcentaje de reclamos resueltos:</h1>
+    <br><img class="mx-auto mt-1 mb-3" src="static/images/grafico_pie.png" width="350">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Palabras mas repetidas en los reclamos</h1>
+                <div class="word-cloud">
+                    {{ word_cloud_html|safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="/generar_archivo" method="POST">
+        <select name="formato">
+            <option value="html">HTML</option>
+            <option value="pdf">PDF</option>
+        </select>
+        <input type="submit" value="Generar archivo con reporte">
+    </form>
+
+    <form class="mx-5 mt-1 mb-3" action="/analitica" method="POST">
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+
+
+
+
+</body>
+</html>

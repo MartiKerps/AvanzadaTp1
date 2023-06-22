@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edicion de reclamos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body class="d-flex flex-column">
+    <br><h1>Edicion de reclamos</h1>
+    <div class="mx-5 mt-5 d-flex flex-column">
+        {% if key == "alumnado" or key == "limpieza": %}
+            <form class="mx-1 mt-1 mb-3" action="{{ url_for('edit') }}" method="post">
+                <h3>Indique el nuevo estado del Reclamo: </h3>
+                <input type="hidden" name="id" value="{{reclamo.id}}">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                      <input class="form-check-input me-1" type="radio" name="estado" value="pendiente" id="firstRadio">
+                      <label class="form-check-label" for="firstRadio">Pendiente</label>
+                    </li>
+                    <li class="list-group-item">
+                      <input class="form-check-input me-1" type="radio" name="estado" value="en progreso" id="secondRadio">
+                      <label class="form-check-label" for="secondRadio">En progreso</label>
+                    </li>
+                    <li class="list-group-item">
+                      <input class="form-check-input me-1" type="radio" name="estado" value="resuelto" id="thirdRadio">
+                      <label class="form-check-label" for="thirdRadio">Resuelto</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" name="estado" value="invalido" id="thirdRadio">
+                        <label class="form-check-label" for="thirdRadio">Invalido</label>
+                    </li>
+                    <input type="submit" value="Editar">
+                </ul>
+            </form>
+        {% elif key == "admin" : %}
+            <form class="mx-1 mt-1 mb-3" action="{{ url_for('edit') }}" method="post">
+                <h3>Indique el nuevo estado del Reclamo: </h3>
+                <input type="hidden" name="id" value="{{reclamo.id}}">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <input class="form-check-input me-1" type="radio" name="estado" value="Pendiente" id="firstRadio">
+                    <label class="form-check-label" for="firstRadio">Pendiente</label>
+                    </li>
+                    <li class="list-group-item">
+                    <input class="form-check-input me-1" type="radio" name="estado" value="En progreso" id="secondRadio">
+                    <label class="form-check-label" for="secondRadio">En progreso</label>
+                    </li>
+                    <li class="list-group-item">
+                    <input class="form-check-input me-1" type="radio" name="estado" value="Resuelto" id="thirdRadio">
+                    <label class="form-check-label" for="thirdRadio">Resuelto</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="radio" name="estado" value="invalido" id="thirdRadio">
+                        <label class="form-check-label" for="thirdRadio">Invalido</label>
+                    </li>
+                    <input type="submit" value="Editar estado">
+                </ul>
+                <br><h3>Derivar el reclamo a otro departamento</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                    <input class="form-check-input me-1" type="radio" name="dpto" value="limpieza" id="firstRadio">
+                    <label class="form-check-label" for="firstRadio">Derivar a Dpto. de Limpieza</label>
+                    </li>
+                    <li class="list-group-item">
+                    <input class="form-check-input me-1" type="radio" name="dpto" value="alumnado" id="secondRadio">
+                    <label class="form-check-label" for="secondRadio">Derivar a Dpto. de Alumnado</label>
+                    </li>
+                    <br><input type="submit" value="Derivar">
+                </ul>
+            </form>
+
+
+        {% else: %}
+        <form class="mx-1 mt-1 mb-3" action="{{ url_for('edit') }}" method="post">
+            <input type="hidden" name="id" value="{{libro.id}}">
+            <label for="nombre">Título del libro:</label><br>
+            <input type="text" id="nombre" name="titulo" value="{{libro.nombre}}" ><br>
+            <label for="autor">Autor del libro:</label><br>
+            <input type="text" id="autor" name="autor" value="{{libro.autor}}"><br>
+            <label for="puntaje">Puntuación:</label><br>
+            <input type="text" id="puntaje" name="puntaje" value="{{libro.puntaje}}"><br><br>
+            <input type="submit" value="Editar">
+        </form>
+        {% endif %}
+    </div>
+</body>
+</html>

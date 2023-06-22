@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinta Transportadora </title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Layout.css') }}">
+</head>
+<body>
+    <div class="container p-3">
+        <h1>CINTA TRANSPORTADORA
+        </h1><br>
+
+        <div class="clearfix">
+          <img src="static/images/smart-belt.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+       
+        <h1>Actividad Acuosa: 
+        </h1><br>
+     
+    </div>
+    <div class="card" style="width: 18rem;">
+        <!--<img src="..." class="card-img-top" alt="...">  -->
+        <div class="card-body">
+          <h2 class="card-title">Cajon de Alimentos </h2>
+          <!-- <p class="card-text">La cantidad de alimentos por cajon es: {{cantidad }}</p>-->
+        </div>   
+        <ul class="list-group list-group-flush">
+          <h4>La actividad acuosa promedio de cada alimento :</h4>
+          <li class="list-group-item">Kiwi: {{aw_kiwi}}
+            <h6>{{resp_k}}</h6>
+          </li>
+          <li class="list-group-item">Manzana: {{aw_manzana}}
+            <h6>{{resp_m}}</h6>
+            </li>
+          <li class="list-group-item">Papa: {{aw_papa}}
+            <h6>{{resp_p}}</h6>
+          </li>
+          <li class="list-group-item">Zanahoria: {{aw_zanahoria}}
+            <h6>{{resp_z}}</h6>
+          </li>
+        </ul>
+        <ul class="list-group list-group-flush">
+            <h4>La actividad acuosa promedio por tipo de alimento</h4>
+            <li class="list-group-item">Frutas: {{aw_fruta}}</li>
+            <li class="list-group-item">Verduras: {{aw_verdura}}</li>
+            <h4>La actividad acuosa promedio total del conjunto de alimentos</h4>
+            <li class="list-group-item">Total de frutas y verduras: {{aw_alimento}}</li>
+        </ul>
+        
+      </div>
+    </div>
+</body>
+</html>

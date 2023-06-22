@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de alimentos </title>
+</head>
+<body>
+    <h1>La cantidad de alimentos por cajon es: {{cantidad }}</h1>
+
+    <h2>Actividades acuosas:
+        kiwi:{{aw_kiwi}}
+        manzana:{{aw_manzana}}
+        papa:{{aw_papa}}
+        zanahoria{{aw_zanahoria}}
+
+        frutas:{{aw_fruta}}
+        verduras:{{aw_verdura}}
+        total de frutas y verduras: {{aw_alimento}}
+    </h2>
+    <div class="card" style="width: 18rem;">
+        <!--<img src="..." class="card-img-top" alt="...">  -->
+        <div class="card-body">
+          <h5 class="card-title">Cajon de Alimentos </h5>
+          <p class="card-text">La cantidad de alimentos por cajon es: {{cantidad }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">kiwi:{{aw_kiwi}}</li>
+          <li class="list-group-item">manzana:{{aw_manzana}}</li>
+          <li class="list-group-item">papa:{{aw_papa}}</li>
+          <li class="list-group-item">zanahoria:{{aw_zanahoria}}</li>
+        </ul>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">frutas:{{aw_fruta}}</li>
+            <li class="list-group-item">verduras:{{aw_verdura}}</li>
+            <li class="list-group-item">total de frutas y verduras: {{aw_alimento}}</li>
+        </ul>
+        <div class="card-body">
+          <a href="home.html" class="card-link">Regresar</a>
+        </div>
+      </div>
+</body>
+</html>
+
